@@ -5,7 +5,7 @@ MAINTAINER Alan Acosta <zagato.gekko@gmail.com>
 LABEL "Proyecto de la clase Docker :: NGinx"
 
 RUN mkdir /var/www/public
-RUN echo '<?php echo "Conectado"; print_r( pg_connect("host=pruebapg.com port=5432 dbname=postgres user=postgres password=123456") ); ?>' > /var/www/public/pg.php
+RUN echo '<?php echo "Conectado"; print_r( pg_connect("host=db port=5432 dbname=postgres user=postgres password=123456") ); ?>' > /var/www/public/pg.php
 
 #RUN yum -y install vim gcc nano
 # COPY nano-2.3.1-10.el7.x86_64.rpm /root/
